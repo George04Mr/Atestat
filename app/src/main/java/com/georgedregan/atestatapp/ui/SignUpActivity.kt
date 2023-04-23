@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.ViewTreeObserver
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.georgedregan.atestatapp.R
 
@@ -12,6 +13,9 @@ class SignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
+
+        val goToSignInBtn = findViewById<Button>(R.id.goToSignIn)
+        goToSignInBtn.setOnClickListener { goToSignIn() }
 
         val content: View = findViewById(android.R.id.content)
         content.viewTreeObserver.addOnPreDrawListener(
@@ -32,4 +36,6 @@ class SignUpActivity : AppCompatActivity() {
             }
         )
     }
+
+    private fun goToSignIn() = startActivity(Intent(this, SignInActivity::class.java))
 }
