@@ -24,17 +24,21 @@ class MainActivity : AppCompatActivity() {
         val contentRV = findViewById<RecyclerView>(R.id.contentRV)
         contentRV.adapter = adapter
 
+        // Launch on Background Thread
         CoroutineScope(IO).launch {
+            // We take db instance
             val db = Room.databaseBuilder(
                 applicationContext,
                 AppDatabase::class.java, "database-name"
             ).build()
 
             val glucoseLevelDao = db.glucoseLevelDao()
-            glucoseLevelDao.insert(GlucoseLevel(123L, "George", 85))
+            val glucoseLevel = GlucoseLevel(123L, "George", 85)
+            glucoseLevelDao.insert(glucoseLevel)
 
             // ToDo Retrieve data from db
-            adapter.submitList(glucoseLevelDao.getAll())
+            val glucoseLevelList = glucoseLevelDao.getAll()
+            adapter.submitList(glucoseLevelList)
         }
     }
 }
