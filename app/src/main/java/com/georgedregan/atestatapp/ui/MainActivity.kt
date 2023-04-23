@@ -9,8 +9,6 @@ import com.georgedregan.atestatapp.data.GlucoseLevel
 import com.georgedregan.atestatapp.database.AppDatabase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
