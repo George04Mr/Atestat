@@ -2,7 +2,6 @@ package com.georgedregan.atestatapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 import com.georgedregan.atestatapp.R
 import com.georgedregan.atestatapp.data.GlucoseLevel
