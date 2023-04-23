@@ -24,7 +24,7 @@ class SignUpActivity : AppCompatActivity() {
 
                     // Check if user is logged in
                     // ToDo Check from DB
-                    return if (true) {
+                    return if (false) {
                         // The content is ready. Start drawing.
                         content.viewTreeObserver.removeOnPreDrawListener(this)
                         true
