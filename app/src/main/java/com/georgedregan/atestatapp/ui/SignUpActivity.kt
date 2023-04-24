@@ -18,7 +18,6 @@ import kotlinx.coroutines.launch
 class SignUpActivity : AppCompatActivity() {
 
     private lateinit var db: AppDatabase
-    private val userList = mutableListOf<User>()
     private lateinit var nameET: EditText
     private lateinit var passwordET: EditText
     private lateinit var usernameET: EditText
