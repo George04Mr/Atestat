@@ -30,6 +30,7 @@ class SignUpActivity : AppCompatActivity() {
                         true
                     } else {
                         startActivity(Intent(this@SignUpActivity, MainActivity::class.java))
+                        finishAffinity()
                         false
                     }
                 }
@@ -37,5 +38,8 @@ class SignUpActivity : AppCompatActivity() {
         )
     }
 
-    private fun goToSignIn() = startActivity(Intent(this, SignInActivity::class.java))
+    private fun goToSignIn() {
+        startActivity(Intent(this, SignInActivity::class.java))
+        finishAffinity()
+    }
 }
