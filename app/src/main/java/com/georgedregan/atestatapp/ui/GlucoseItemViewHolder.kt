@@ -5,6 +5,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.georgedregan.atestatapp.R
 import com.georgedregan.atestatapp.data.GlucoseLevel
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class GlucoseItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -13,5 +16,8 @@ class GlucoseItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) 
         val levelTV = itemView.findViewById<TextView>(R.id.levelTV)
 
         levelTV.text = "Nivel glicemie: ${glucoseLevel.level}"
+
+        val format = SimpleDateFormat("dd MMMM yyyy HH:mm", Locale.US)
+        dateTV.text = format.format(Date(glucoseLevel.date))
     }
 }
