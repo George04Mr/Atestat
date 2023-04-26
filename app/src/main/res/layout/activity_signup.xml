@@ -49,6 +49,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="376dp"
         android:hint="Parola..."
+        android:inputType="textPassword"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
