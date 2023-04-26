@@ -23,7 +23,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:gravity="center"
-                android:text="Acasa"
+                android:text="Acasă"
                 android:textColor="#6C4646"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"

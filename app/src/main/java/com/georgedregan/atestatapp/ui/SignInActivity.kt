@@ -57,7 +57,7 @@ class SignInActivity : AppCompatActivity() {
                 launch(Dispatchers.Main) {
                     Toast.makeText(
                         this@SignInActivity,
-                        "Ai gresit parola sau numele de utilizator, încearcă din nou",
+                        "Ai greșit parola sau numele de utilizator, încearcă din nou",
                         Toast.LENGTH_LONG
                     ).show()
                 }
